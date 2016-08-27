@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Company</th>
+      <th>Comurl</th>
+      <th>Designation</th>
+      <th>Minsalary</th>
+      <th>Maxsalary</th>
+      <th>Minexp</th>
+      <th>Maxexp</th>
+      <th>Category</th>
+      <th>Location</th>
+      <th>Mode</th>
+      <th>Jtype</th>
+      <th>Nperiod</th>
+      <th>Gender</th>
+      <th>Contactperson</th>
+      <th>Contactemail</th>
+      <th>Contactno</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.company %></td>
+        <td><%= job.comurl %></td>
+        <td><%= job.designation %></td>
+        <td><%= job.minsalary %></td>
+        <td><%= job.maxsalary %></td>
+        <td><%= job.minexp %></td>
+        <td><%= job.maxexp %></td>
+        <td><%= job.category_id %></td>
+        <td><%= job.location_id %></td>
+        <td><%= job.mode_id %></td>
+        <td><%= job.jtype_id %></td>
+        <td><%= job.nperiod %></td>
+        <td><%= job.gender_id %></td>
+        <td><%= job.contactperson %></td>
+        <td><%= job.contactemail %></td>
+        <td><%= job.contactno %></td>
+        <td><%= job.description %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>

@@ -1,0 +1,97 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"Job Title" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :"Company Name" %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :"Company Url" %><br>
+    <%= f.text_field :comurl %>
+  </div>
+  <div class="field">
+    <%= f.label :"Designation" %><br>
+    <%= f.text_field :designation %>
+  </div>
+   <div class="field">
+    <%= f.label :"Salary   "%>
+   </div>
+  <div class="field">
+    <%= f.label :"Min     " %>
+    <%= f.number_field :minsalary %>
+  </div>
+  <div class="field">
+    <%= f.label :"Max" %><br>
+    <%= f.number_field :maxsalary %>
+  </div>
+  <div class="field">
+    <%= f.label :"Experience   "%>
+   </div>
+  <div class="field">
+    <%= f.label :"Min    " %>
+    <%= f.number_field :minexp %>
+  </div>
+  <div class="field">
+    <%= f.label :"Max  " %><br>
+    <%= f.number_field :maxexp %>
+  </div>
+  <div class="field">
+    <%= f.label :"Job Category" %><br>
+   	<%= f.select :category_id, Category.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+  </div>
+  <div class="field">
+    <%= f.label :"Job Location" %><br>
+   	<%= f.select :location_id, Location.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+  </div>
+  <div class="field">
+    <%= f.label :"Job Mode" %><br>
+    <%= f.select :mode_id, Mode.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+  </div>
+  <div class="field">
+    <%= f.label :"Job Type" %><br>
+    <%= f.number_field :jtype_id %>
+	<%= f.select :jtype_id, Jtype.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+  </div>
+  <div class="field">
+    <%= f.label :"Notice Period" %><br>
+    <%= f.number_field :nperiod %>
+  </div>
+  <div class="field">
+    <%= f.label :"Preferred Gender" %><br>
+    <%= f.number_field :gender_id %>
+	<%= f.select :gender_id, Gender.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+  </div>
+  <div class="field">
+    <%= f.label :"Contact Person" %><br>
+    <%= f.text_field :contactperson %>
+  </div>
+  <div class="field">
+    <%= f.label :"Contact email" %><br>
+    <%= f.text_field :contactemail %>
+  </div>
+  <div class="field">
+    <%= f.label :"Contact No" %><br>
+    <%= f.number_field :contactno %>
+  </div>
+  <div class="field">
+    <%= f.label :"Description" %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
