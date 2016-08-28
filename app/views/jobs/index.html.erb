@@ -1,3 +1,6 @@
+</br>
+</br>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Jobs</h1>
@@ -31,7 +34,8 @@
     <% @jobs.each do |job| %>
 		<% if job.japproval.name == "Approved" %>
             <tr>
-              <td><%= job.title %></td>
+			  <td><%= link_to job.title, job %></td>
+              
               <td><%= job.company %></td>
               <!--<td><%= job.comurl %></td>-->
               <!--<td><%= job.designation %></td>-->
@@ -40,7 +44,7 @@
               <td><%= job.minexp %></td>
               <td><%= job.maxexp %></td>
               <!--<td><%= job.category.name %></td>-->
-              <!--<td><%= job.location.name %></td>-->
+              <td><%= job.location.name %></td>
               <!--<td><%= job.mode.name %></td>-->
               <!--<td><%= job.jtype.name %></td>-->
               <!--<td><%= job.nperiod %></td>-->
@@ -49,9 +53,9 @@
               <!--<td><%= job.contactemail %></td>-->
               <!--<td><%= job.contactno %></td>-->
               <!--<td><%= job.description %></td>-->
-              <td><%= link_to 'Show', job %></td>
+             <!-- <td><%= link_to 'Show', job %></td>
               <td><%= link_to 'Edit', edit_job_path(job) %></td>
-              <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
             </tr>
 	    <% end %>
     <% end %>
@@ -60,4 +64,4 @@
 
 <br>
 
-<%= link_to 'New Job', new_job_path %>
+

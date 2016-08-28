@@ -8,6 +8,21 @@
 </head>
 <body>
 
+
+<div>
+		<u1 class="main-nav">
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Find Jobs", jobs_path %></li>
+				<li><%= link_to "Post Job", new_job_path %></li>
+				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "Contact", contact_path %></li>
+		</u1>
+</div>
+
+<% flash.each do |key,value| %>
+<p><%= value %></P>
+<% end %>
+
 <%= yield %>
 
 </body>

@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+
+  get 'pages/contact'
+
+  get 'about', :to => 'pages#about'
+  get 'contact', to: 'pages#contact'
+  
   resources :japprovals
   devise_for :admin_users, ActiveAdmin::Devise.config
   
@@ -8,6 +15,7 @@ Rails.application.routes.draw do
   resources :jtypes
   resources :modes
   resources :categories
+  resources :pages
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
