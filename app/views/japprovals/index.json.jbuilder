@@ -1,0 +1,1 @@
+json.array! @japprovals, partial: 'japprovals/japproval', as: :japproval

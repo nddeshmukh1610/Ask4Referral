@@ -63,8 +63,7 @@
   </div>
   <div class="field">
     <%= f.label :"Job Type" %><br>
-    <%= f.number_field :jtype_id %>
-	<%= f.select :jtype_id, Jtype.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+    <%= f.select :jtype_id, Jtype.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
   </div>
   <div class="field">
     <%= f.label :"Notice Period" %><br>
@@ -72,8 +71,7 @@
   </div>
   <div class="field">
     <%= f.label :"Preferred Gender" %><br>
-    <%= f.number_field :gender_id %>
-	<%= f.select :gender_id, Gender.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+   	<%= f.select :gender_id, Gender.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
   </div>
   <div class="field">
     <%= f.label :"Contact Person" %><br>
@@ -89,7 +87,7 @@
   </div>
   <div class="field">
     <%= f.label :"Description" %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
   <div class="actions">
     <%= f.submit %>

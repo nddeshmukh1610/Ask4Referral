@@ -1,0 +1,1 @@
+json.partial! "japprovals/japproval", japproval: @japproval
