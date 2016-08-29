@@ -19,7 +19,7 @@ class Job < ActiveRecord::Base
 	validates :jtype, presence:true
 	VALID_EMAIL_REGEX =  /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i	#         /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/+\z/i
 	validates :contactemail, presence:true, format: { with: VALID_EMAIL_REGEX }
-	validates :contactno, presence:true, numericality: true, length: {minimum:10, maximum:15}
+	validates :contactno, presence:true, numericality: true, length: {minimum:10, maximum:13}   # Need to create logic ,only number and + sign
 	validates :description, presence:true
 	
 end

@@ -90,7 +90,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @job.description %>
+   <%= sanitize(@job.description, :tags => ['strong', 'em', 'a', 'p','u']) %>
 </p>
 
 <%= link_to 'Back', jobs_path %>

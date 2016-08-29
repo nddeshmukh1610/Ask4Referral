@@ -56,3 +56,9 @@ gem 'thin'
 
 gem 'activeadmin',github:'activeadmin'
 gem 'devise'
+
+gem 'paperclip'
+
+gem "ckeditor"
+
+gem 'sanitize'
