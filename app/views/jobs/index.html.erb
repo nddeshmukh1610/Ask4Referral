@@ -1,67 +1,41 @@
 </br>
 </br>
 
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Jobs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th width="30%">Title</th>
-      <th width="30%">Company</th>
-      <!--<th>Comurl</th> -->
-      <!--<th>Designation</th> -->
-      <!--<th>Minsalary</th> -->
-      <!--<th>Maxsalary</th> -->
-      <th width="10%">Minexp</th> 
-      <th width="10%">Maxexp</th>
-      <!--<th>Category</th> -->
-      <th width="10%">Location</th>
-      <!--<th>Mode</th> -->
-      <!--<th>Jtype</th> -->
-      <!--<th>Nperiod</th> -->
-      <!--<th>Gender</th> -->
-      <!--<th>Contactperson</th> -->
-      <!--<th>Contactemail</th> -->
-      <!--<th>Contactno</th> -->
-      <!--<th>Description</th> -->
-      <th colspan="3"></th> 
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
-		<% if job.japproval.name == "Approved" %>
-            <tr>
-			  <td><%= link_to job.title, job %></td>
-              
-              <td><%= job.company %></td>
-              <!--<td><%= job.comurl %></td>-->
-              <!--<td><%= job.designation %></td>-->
-              <!--<td><%= job.minsalary %></td>-->
-              <!--<td><%= job.maxsalary %></td>-->
-              <td><%= job.minexp %></td>
-              <td><%= job.maxexp %></td>
-              <!--<td><%= job.category.name %></td>-->
-              <td><%= job.location.name %></td>
-              <!--<td><%= job.mode.name %></td>-->
-              <!--<td><%= job.jtype.name %></td>-->
-              <!--<td><%= job.nperiod %></td>-->
-              <!--<td><%= job.gender.name %></td>-->
-             <!-- <td><%= job.contactperson %></td>-->
-              <!--<td><%= job.contactemail %></td>-->
-              <!--<td><%= job.contactno %></td>-->
-              <!--<td><%= job.description %></td>-->
-             <!-- <td><%= link_to 'Show', job %></td>
-              <td><%= link_to 'Edit', edit_job_path(job) %></td>
-              <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-            </tr>
-	    <% end %>
-    <% end %>
-  </tbody>
-</table>
-
+   <div class="col-fullwidth">
+        <div class="whitebox padd-15 clearfix">                    
+            <h4 class="acchead">Latests Jobs</h4>
+				<div class="job-box">
+						<table  width="100%" class="pure pure-table  pure-table-bordered pure-table-hover" id="results">
+						<thead>
+							<tr>
+							<th width="30%">JOB TITLE</th>
+							<th width="30%">JOB COMPANY</th>
+							<th width="10%">EXPERIENCE</th> 
+							<th width="10%">JOB Location</th>
+							<th width="10%">JOB POSTED</th>
+							<th colspan="3"></th> 
+							</tr>
+						</thead>
+						
+						<tbody>
+							<% @jobs.each do |job| %>
+								<% if job.japproval.name == "Approved" %>
+									<% @localminexp = job.minexp %>
+									<% @localmaxexp = job.maxexp %>
+									<tr>
+										<td><%= link_to job.title, job %></td>
+										<td><%= job.company %></td>			  
+										<td><%= "#{@localminexp} - #{@localmaxexp} Years" %></td>
+										<td><%= job.location.name %></td>
+										<td><%= job.created_at.strftime("%d- %b- %Y") %></td>
+									</tr>
+								<% end %>
+							<% end %>
+						</tbody>
+						</table>
+				</div>
+		</div>
+	</div>
 <br>
 
 
