@@ -62,3 +62,7 @@ gem 'paperclip'
 gem "ckeditor"
 
 gem 'sanitize'
+
+gem 'carrierwave'
+
+gem 'bootstrap-sass'

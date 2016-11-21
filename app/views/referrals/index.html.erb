@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Referrals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fname</th>
+      <th>Lname</th>
+      <th>Company</th>
+      <th>Comurl</th>
+      <th>Designation</th>
+      <th>Currsalary</th>
+      <th>Expsalary</th>
+      <th>Exp</th>
+      <th>Location</th>
+      <th>Mode</th>
+      <th>Jtype</th>
+      <th>Nperiod</th>
+      <th>Gender</th>
+      <th>Contactemail</th>
+      <th>Contactno</th>
+      <th>Resume</th>
+      <th>Attachment</th>
+      <th>Jobid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @referrals.each do |referral| %>
+      <tr>
+        <td><%= referral.fname %></td>
+        <td><%= referral.lname %></td>
+        <td><%= referral.company %></td>
+        <td><%= referral.comurl %></td>
+        <td><%= referral.designation %></td>
+        <td><%= referral.currsalary %></td>
+        <td><%= referral.expsalary %></td>
+        <td><%= referral.exp %></td>
+        <td><%= referral.location_id %></td>
+        <td><%= referral.mode_id %></td>
+        <td><%= referral.jtype_id %></td>
+        <td><%= referral.nperiod %></td>
+        <td><%= referral.gender_id %></td>
+        <td><%= referral.contactemail %></td>
+        <td><%= referral.contactno %></td>
+        <td><%= referral.resume %></td>
+        <td><%= link_to referral.resume, referral.attachment_url %></td>
+        <td><%= referral.jobid %></td>
+        <td><%= link_to 'Show', referral %></td>
+        <td><%= link_to 'Edit', edit_referral_path(referral) %></td>
+        <td><%= link_to 'Destroy', referral, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Referral', new_referral_path %>

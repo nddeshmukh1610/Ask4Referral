@@ -1,0 +1,96 @@
+<%= form_for(@referral) do |f| %>
+  <% if @referral.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@referral.errors.count, "error") %> prohibited this referral from being saved:</h2>
+
+      <ul>
+      <% @referral.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fname %><br>
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname %><br>
+    <%= f.text_field :lname %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :comurl %><br>
+    <%= f.text_field :comurl %>
+  </div>
+  <div class="field">
+    <%= f.label :designation %><br>
+    <%= f.text_field :designation %>
+  </div>
+  <div class="field">
+    <%= f.label :currsalary %><br>
+    <%= f.number_field :currsalary %>
+  </div>
+  <div class="field">
+    <%= f.label :expsalary %><br>
+    <%= f.number_field :expsalary %>
+  </div>
+  <div class="field">
+    <%= f.label :exp %><br>
+    <%= f.number_field :exp %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br>
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mode_id %><br>
+    <%= f.number_field :mode_id %>
+  </div>
+  <div class="field">
+    <%= f.label :jtype_id %><br>
+    <%= f.number_field :jtype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nperiod %><br>
+    <%= f.number_field :nperiod %>
+  </div>
+  <div class="field">
+    <%= f.label :gender_id %><br>
+    <%= f.number_field :gender_id %>
+  </div>
+  <div class="field">
+    <%= f.label :contactemail %><br>
+    <%= f.text_field :contactemail %>
+  </div>
+  <div class="field">
+    <%= f.label :contactno %><br>
+    <%= f.number_field :contactno %>
+  </div>
+  
+  
+  <div form_for @referral, html: { multipart: true } do >
+      <%= f.label :resume %>
+      <%= f.text_field :resume %>
+	  <%= f.label :attachment %><br>
+      <%= f.file_field :attachment %>
+  </div>
+  
+  
+  
+  <!-- <div class="field">
+    <%= f.label :attachment %><br>
+    <%= f.text_field :attachment %>
+  </div> 
+  <div class="field">
+    <%= f.label :jobid %><br>
+    <%= f.number_field :jobid %>
+  </div>-->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

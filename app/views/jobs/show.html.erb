@@ -93,4 +93,11 @@
    <%= sanitize(@job.description, :tags => ['strong', 'em', 'a', 'p','u']) %>
 </p>
 
-<%= link_to 'Back', jobs_path %>
+<p>
+  <strong>Job Id:</strong>
+   <%= @job.id %>
+</p>
+
+<p> </p>
+
+<%= link_to 'Ask4Refferal', new_referral_path(:jobid => @job.id)  %>

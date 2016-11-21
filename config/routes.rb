@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :referrals
   mount Ckeditor::Engine => '/ckeditor'
   get 'pages/about'
 
@@ -17,12 +18,17 @@ Rails.application.routes.draw do
   resources :modes
   resources :categories
   resources :pages
+  resources :uploads
   get 'home/index'
 
  
   root 'jobs#index'
-
+  
+  
+  
+  get 'referrals/index'
+  
  
   ActiveAdmin.routes(self)
-  get '*path', to: 'jobs#index'
+ # get '*path', to: 'jobs#index'
 end

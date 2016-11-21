@@ -7,6 +7,7 @@ class Job < ActiveRecord::Base
 	belongs_to :gender
 	belongs_to :japproval
 	
+	
 	validates :title, presence:true, length: {minimum:5, maximum:40}
 	validates :company, presence:true, length: {minimum:3}
 	validates :comurl, presence:true, length: {minimum:5, maximum:30}

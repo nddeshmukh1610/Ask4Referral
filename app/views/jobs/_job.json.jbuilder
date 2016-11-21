@@ -1,2 +1,0 @@
-json.extract! job, :id, :title, :company, :comurl, :designation, :minsalary, :maxsalary, :minexp, :maxexp, :category_id, :location_id, :mode_id, :jtype_id, :nperiod, :gender_id, :contactperson, :contactemail, :contactno, :description, :created_at, :updated_at
-json.url job_url(job, format: :json)

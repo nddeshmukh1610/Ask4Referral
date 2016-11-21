@@ -1,0 +1,2 @@
+json.extract! referral, :id, :fname, :lname, :company, :comurl, :designation, :currsalary, :expsalary, :exp, :location_id, :mode_id, :jtype_id, :nperiod, :gender_id, :contactemail, :contactno, :resume, :attachment, :jobid, :created_at, :updated_at
+json.url referral_url(referral, format: :json)
