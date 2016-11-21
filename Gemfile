@@ -57,7 +57,7 @@ gem 'thin'
 gem 'activeadmin',github:'activeadmin'
 gem 'devise'
 
-#gem 'paperclip'
+gem 'paperclip'
 
 gem "ckeditor"
 
