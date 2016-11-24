@@ -26,9 +26,9 @@ Rails.application.routes.draw do
   
   
   
-  get 'referrals/index'
+  #get 'referrals/index'
   
  
   ActiveAdmin.routes(self)
- # get '*path', to: 'jobs#index'
+  get '*path', to: 'jobs#index'
 end

@@ -1,31 +1,115 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Ask4Referral, Get Referred, Get Hired, Fast Recruitment</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ask4Referral, Get Referred, Get Hired, Fast Recruitment</title>
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+		<%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+        
+               
+        
+        <style>      
+            body {position: relative;}      
+            table.main {zoom: 1;}
+            table.main tr td {vertical-align: top;}
+            table.main tr td:first-child, table.main tr td:last-child {width: 170px;}
+            table.main tr td:first-child {padding-right: 10px; padding-top: 15px;}
+            table.main tr td:last-child {padding-left: 10px; padding-top: 15px;}
+            
+            .coursesLinks {
+                
+            }
+        </style>
+    </head>
+    <body>
+        <table class="main" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <div class="wrap clearfix">
+                        
+<header>
+                <div class="topnav-wrap">
+                    <div class="clearfix">
+                        <nav role="navigation" class="main-nav">
+                            <ul>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Find Jobs", jobs_path %></li>
+                                <li><%= link_to "Post Job", new_job_path %></li>
+								<li><%= link_to "About Us", about_path %></li>
+                                <li><%= link_to "Contact Us", contact_path %></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="padd-20 blackbox clearfix">
+                    <div class="logo">
+					<%= link_to root_path do %>
+						<%= image_tag("logo.png", :alt => "Ask4Referral") %>
+					<% end %>
+					</div>
+                </div>
+            </header>                        
+                        
 
 
-<div>
-		<u1 class="main-nav">
-				<li><%= link_to "Home", root_path %></li>
-				<li><%= link_to "Find Jobs", jobs_path %></li>
-				<li><%= link_to "Post Job", new_job_path %></li>
-				<li><%= link_to "About Us", about_path %></li>
-				<li><%= link_to "Contact Us", contact_path %></li>
-		</u1>
-</div>
+
+
+
+
+
+
+
+
+
+
 
 <% flash.each do |key,value| %>
 <p><%= value %></P>
 <% end %>
 
 <%= yield %>
-
-
-</body>
+						
+						
+						
+                        <footer>
+                <div class="padd-15 blackbox clearfix">
+                    <div class="foot-left">
+                        <h4>About Ask4Referral</h4>
+                        <p>Our mission is to speed up hiring process through removing the gap between the referrer and job seeker (referee), the point of contact for a Job Seeker will be the direct referrer working in the targeted company instead of the consultancy.</p>
+                        <a href="about-us.php.htm" class="readmore">read more &raquo;</a>
+                    </div>
+                    <div class="foot-center">
+                        <h4>Links</h4>
+                        <ul class="foot-links">
+						    <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Find Jobs", jobs_path %></li>
+                                <li><%= link_to "Post Job", new_job_path %></li>
+								<li><%= link_to "About Us", about_path %></li>
+                                <li><%= link_to "Contact Us", contact_path %></li>
+                        </ul>
+                    </div>
+                   <div class="foot-right">
+                        <h4>Ask4Referral Pvt Ltd </h4>
+                        <p>
+                            FF-4, Manyata Apt Near R.V. Public School<br>
+                            Mavali, Bengaluru-560004<br>
+                            Mobile: +91 9945508524</p>
+                        <p>Email: <a href="mainto:query@ask4refferalcom" class="readmore">query@ask4refferal.com</a></p>
+                    </div>
+                </div>
+            </footer>
+                                </div>
+                </td>
+                <td>
+				                 </td>
+            </tr>
+        </table>
+			
+       
+    </body>
 </html>

@@ -1,11 +1,9 @@
 <h1>New Referral</h1>
 
-
 <p>
   <strong>Job Id:</strong>
-   <%= params['jobid'] %></br>
+  <%= @jobid1 %></br>
 </p>
-
 
 
 <%= form_for(@referral) do |f| %>
@@ -94,7 +92,7 @@
   
   
   
-  <%= f.hidden_field :jobid, :value => params['jobid'] %>
+  <%= f.hidden_field :jobid, :value => @jobid1 %>
   
   
    

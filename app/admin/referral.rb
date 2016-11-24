@@ -28,7 +28,7 @@ index do
      column :resume
      column :jobid
      column :attachment do |referral|
-							link_to  referral.resume, referral.attachment_url
+							link_to  referral.attachment, referral.attachment_url
 						end
  
 
@@ -59,7 +59,7 @@ show do
      row :resume
      row :jobid
      row :attachment do |referral|
-							link_to  referral.resume, referral.attachment_url
+							link_to  referral.attachment, referral.attachment_url
 					 end
  
 

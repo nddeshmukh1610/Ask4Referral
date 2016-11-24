@@ -9,11 +9,12 @@ class Job < ActiveRecord::Base
 	
 	
 	validates :title, presence:true, length: {minimum:5, maximum:40}
-	validates :company, presence:true, length: {minimum:3}
+	validates :company, presence:true, length: {minimum:3, maximum:15}
 	validates :comurl, presence:true, length: {minimum:5, maximum:30}
 	validates :minexp, presence:true, numericality: true, length: {minimum:1, maximum:2}
 	validates :maxexp, presence:true, numericality: true, length: {minimum:1, maximum:2}
-	validates :contactperson, presence:true
+	validates :nperiod, presence:true, numericality: true, length: {minimum:1, maximum:2}
+	validates :contactperson, presence:true, length: {minimum:5, maximum:30}
 	
 	validates :category, presence:true
 	validates :location, presence:true
