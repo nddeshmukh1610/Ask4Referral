@@ -1,4 +1,4 @@
-class ChangeDataTypeForContactno < ActiveRecord::Migration
+class ChangeDataTypeForContactno1 < ActiveRecord::Migration
   def self.up
     change_table :jobs do |t|
       t.change :contactno, :integer
