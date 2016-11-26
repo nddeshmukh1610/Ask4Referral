@@ -1,7 +1,9 @@
 </br>
-</br>
 
 <p id="notice"><%= notice %></p>
+
+<div class="col-fullwidth">
+<div class="col-left">
 
 <p>
   <strong>Title:</strong>
@@ -98,6 +100,14 @@
    <%= @job.id %>
 </p>
 
-<p> </p>
+</div>
+
+<div class="col-right ">
+					<strong>Ads</strong>
+</div>
+</div>
+</br>
+
 
 <%= link_to 'Ask4Refferal', new_referral_path(:jobid => @job.id)  %>
+</br>

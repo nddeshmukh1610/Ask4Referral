@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
+  
+  get 'jobs/findjobs'
 
   get 'about', :to => 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'findjobs', to: 'jobs#findjobs'
   
   resources :japprovals
   devise_for :admin_users, ActiveAdmin::Devise.config
