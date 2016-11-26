@@ -87,6 +87,7 @@
   <div form_for @referral, html: { multipart: true } do >
   	  <%= f.label :attachment %><br>
       <%= f.file_field :attachment %>
+	  <%= f.hidden_field :attachment_cache %>
   </div>
   
   
