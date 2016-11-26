@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126191713) do
+ActiveRecord::Schema.define(version: 20161126212631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,12 +141,12 @@ ActiveRecord::Schema.define(version: 20161126191713) do
     t.integer  "nperiod"
     t.integer  "gender_id"
     t.string   "contactemail"
-    t.integer  "contactno",    limit: 8
+    t.string   "contactno"
     t.string   "resume"
     t.string   "attachment"
     t.integer  "jobid"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
