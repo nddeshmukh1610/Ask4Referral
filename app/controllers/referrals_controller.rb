@@ -1,8 +1,6 @@
 class ReferralsController < ApplicationController
 
 
-
- 
 	
 	def new 
 			
@@ -38,7 +36,7 @@ class ReferralsController < ApplicationController
   private
 
     def referral_params
-      params.require(:referral).permit(:fname, :lname, :company, :comurl, :designation, :currsalary, :expsalary, :exp, :location_id, :mode_id, :jtype_id, :nperiod, :gender_id, :contactemail, :contactno, :resume, :attachment, :jobid)
+      params.require(:referral).permit(:fname, :lname, :company, :comurl, :designation, :currsalary, :expsalary, :exp, :location_id, :mode_id, :jtype_id, :nperiod, :gender_id, :contactemail, :contactno, :resume, :attachment, :jobid, :attachment_cache)
     end
 end
 

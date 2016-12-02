@@ -8,7 +8,7 @@
 
 
 
-<%= form_for(@referral) do |f| %>
+<%= form_for @referral, html: { multipart: true } do |f| %>
   <% if @referral.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@referral.errors.count, "error") %> prohibited this referral from being saved:</h2>
@@ -86,7 +86,7 @@
    	<%= f.select :gender_id, Gender.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
   </div>
    
-  <div form_for @referral, html: { multipart: true } do >
+  <div>
   	  <%= f.label :attachment %><br>
       <%= f.file_field :attachment %>
 	  <%= f.hidden_field :attachment_cache %>

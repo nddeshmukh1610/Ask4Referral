@@ -32,5 +32,6 @@ class Referral < ActiveRecord::Base
 	def attachment_size_validation
     errors[:attachment] << "should be less than 1MB" if attachment.size > 1.megabytes
     end
+	
 	    
 end
