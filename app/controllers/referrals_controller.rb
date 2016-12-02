@@ -20,7 +20,8 @@ class ReferralsController < ApplicationController
 		#@job.japproval_id ||= "1"	# To set the default value of japproval_id as pending
 		#@job.gender_id="3" if @job.gender_id.blank?
 		@jobid1 = @referral.jobid
-		@attachment1 = @referral.attachment
+		@attachment1 = @referral.attachment_cache
+		@attachment2 = File.basename(@referral.attachment.path)
 		
 		if @referral.save 
 			redirect_to jobs_path, :notice => "Your referral has been noted #{@referral.jobid} successfully,Please wait for the call from employer"
