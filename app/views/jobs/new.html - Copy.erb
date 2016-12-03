@@ -1,0 +1,132 @@
+
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2>Please try again with mandatory field marked as *</h2>
+
+      <ul>
+      <%= @job.errors.full_messages.first if @job.errors.any? %>
+      </ul>
+    </div>
+  <% end %>
+  
+		<div class="col-fullwidth">
+                <div class="whitebox padd-25 clearfix">
+                    
+                    <div class="col-left">
+                        <h1>Post Jobs</h1>                                                                                             
+                        
+                             <div class="col-half-left" >
+								<%= f.label :"Job Title *" %>
+								<%= f.text_field :title, placeholder: "Ex. Software Engineer, Quality Analyst", :class => "input-xxlarge" %>
+							 </div>
+                             									
+							 <div class="col-half-right">
+								<%= f.label :"Company Name *" %>
+								<%= f.text_field :company, placeholder: "Ex. IBM, TechM, Wipro" %>
+							 </div>
+							 <div class="hr-spacer"></div>						 
+							 <div class="col-half-left">
+								<%= f.label :"Company Url *" %>
+								<%= f.text_field :comurl, placeholder: "Ex. www.ibm.com" %>
+							 </div>
+							 					 
+							  <div class="col-half-right">
+								<%= f.label :"Designation *" %>
+								<%= f.text_field :designation, placeholder: "Ex. R&D Engineer, Senior Developer" %>
+							 </div> 
+							<div class="hr-spacer"></div>	
+							<div class="col-half-left">
+								<%= f.label :"Job Category *" %>
+								<%= f.select :category_id, Category.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+							</div>
+													 
+							<div class="col-half-right">
+									<%= f.label :"Job Location *" %>
+									<%= f.select :location_id, Location.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+							</div>
+							<div class="hr-spacer"></div>
+							<div class="col-half-left">
+									<%= f.label :"Job Mode *" %>
+									<%= f.select :mode_id, Mode.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+							</div>
+							
+							<div class="col-half-right">
+									<%= f.label :"Job Type *" %>
+									<%= f.select :jtype_id, Jtype.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+							</div>
+							<div class="hr-spacer"></div>						
+							<div class="col-half-left">
+								<%= f.label :"Preferred Gender" %>
+								<%= f.select :gender_id, Gender.all.collect {|x| [x.name ,x.id]}, {:include_blank => "Select One"} %><br />
+							</div>
+							
+							<div class="col-half-right">
+								<%= f.label :"Contact Person *" %>
+								<%= f.text_field :contactperson %>
+							</div>
+							<div class="hr-spacer"></div>																				  
+							<div class="col-half-left">
+								<%= f.label :"Contact Number *" %>
+								<%= f.text_field :contactno, placeholder: "Ex. +919945508524" %>
+							</div>
+													  
+							<div class="col-half-right">
+								<%= f.label :"Contact Email *" %>
+								<%= f.text_field :contactemail, placeholder: "Ex. ram@gmail.com" %>
+							</div>							
+							<div class="hr-spacer"></div>														 
+							<div class="col-half-left">
+									<div style="display: inline-block;">
+											<%= f.label :"Salary" %>
+											
+											<%= f.select(:minsalary, [["Min Salary (LPA)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {}, { :class => 'my_style_class' }) %> </br>
+											
+											<%= f.select(:maxsalary, [["Max Salary (LPA)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {}, { :class => 'my_style_class' }) %> </br>
+																														
+									</div>
+							</div>		
+							
+							<div class="col-half-right">
+									<div style="display: inline-block;">
+											<%= f.label :"Experience *" %>
+											
+											<%= f.select(:minexp, [["Min Exp (Years)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {}, { :class => 'my_style_class' }) %> </br>
+											
+											<%= f.select(:maxexp, [["Max Exp (Years)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {}, { :class => 'my_style_class' }) %> </br>
+											
+									</div>
+							</div>		
+							<div class="hr-spacer"></div>
+							<div class="col-half-left">
+									<div style="display: inline-block;">
+											<%= f.label :"Notice Period *" %>
+											
+											<%= f.select(:nperiod, [["Notice Period (Days)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30","31", "32", "33", "34", "35","36", "37", "38", "39", "40","41", "42", "43", "44", "45","46", "47", "48", "49", "50","51", "52", "53", "54", "55","56", "57", "58", "59", "60"], {}, { :class => 'my_style_class' }) %> 									
+											
+									</div>
+							</div>		
+														
+							<div class="hr-spacer"></div>
+							<div class="col-fullwidth">
+								<%= f.label :"Description *" %>
+								<%= f.cktext_area :description, :ckeditor => {:toolbar => 'mini'} %>
+							</div>
+							<div class="hr-spacer"></div>
+							<div class="col-half-left">
+								<%= f.submit %>
+							</div>
+									
+						
+					</div>
+					
+					<div class="col-right ">
+					<%= f.label :"Ads" %>
+					</div>
+                                
+                </div>          
+        </div>
+
+  
+
+<% end %>
