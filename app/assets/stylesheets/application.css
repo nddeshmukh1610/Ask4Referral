@@ -224,18 +224,30 @@ header .logo {
 .col-right {
     float: right;
     width: 27%;
+	margin-right: 1%
 }
+
+
 
 .col-half-left {
     float: left;
-    width: 45%;
-    margin-right: 2%
+    width: 47%;
+	margin-left: 0.5%
+    
 }
 .col-half-right {
     float: right;
-    width: 45%;
-    margin-right: 2%
+    width: 47%;
+	margin-right: o.5%
+    
 }
+
+.text-field {
+    float: left;
+    width: 100%;
+    
+}
+
 
 .col-search-left {float: left; width: 40%; margin-right: 2%;}
 .col-search-right {float: left; width: 40%;}
@@ -541,6 +553,13 @@ footer a:hover.readmore {color: #ccc;}
 .orange li:hover > a, .orange li.active a{background: #E04343;color: #fff!important;}
 
 .hr-spacer {
+    float: left;
+    width: 90%;
+    margin: 5px 0 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.hr-spacer100 {
     float: left;
     width: 100%;
     margin: 5px 0 10px;
@@ -929,4 +948,16 @@ button, input[type="submit"], input[type="reset"] {
     top: 1px;
     border-bottom: 0.2em solid #1894ca;
     margin-bottom: 9.15px;
+}
+
+.button 1{
+  
+  color: #555;
+  display: block;
+  float: left;
+  font: normal 12px arial, sans-serif;
+  height: 48px;
+  margin-right: 6px;
+  padding-right: 18px; /* sliding doors padding */
+  text-decoration: none;
 }

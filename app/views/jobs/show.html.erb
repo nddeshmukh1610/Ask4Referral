@@ -4,110 +4,122 @@
 
 <div class="col-fullwidth">
 <div class="col-left">
-
 <p>
-  <strong>Title:</strong>
-  <%= @job.title %>
+<h2>Job Description:</h2>
+<p>
+<p>
+ <em>Title:</em>
+  <b><%= @job.title %></b>
 </p>
 
 <p>
-  <strong>Company:</strong>
-  <%= @job.company %>
+  <em>Company:</em>
+  <b><%= @job.company %></b>
 </p>
 
 <p>
-  <strong>Comurl:</strong>
-  <%= @job.comurl %>
+  <em>Company url:</em>
+  <b><%= @job.comurl %></b>
 </p>
 
 <p>
-  <strong>Designation:</strong>
-  <%= @job.designation %>
+  <em>Designation:</em>
+  <b><%= @job.designation %></b>
 </p>
 <!--
 <p>
-  <strong>Minsalary:</strong>
-  <%= @job.minsalary %>
+  <em>Min Salary:</em>
+  <b><%= @job.minsalary %></b>
 </p>
 
 <p>
-  <strong>Maxsalary:</strong>
-  <%= @job.maxsalary %>
+  <em>Max Salary:</em>
+  <b><%= @job.maxsalary %></b>
 </p>
 -->
 <p>
-  <strong>Minexp:</strong>
-  <%= @job.minexp %>
+  <em>Min Experience:</em>
+  <b><%= @job.minexp %></b><i> Years</i>
 </p>
 
 <p>
-  <strong>Maxexp:</strong>
-  <%= @job.maxexp %>
+  <em>Max Experience:</em>
+  <b><%= @job.maxexp %></b><i> Years</i>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @job.category.name %>
+  <em>Job Category:</em>
+  <b><%= @job.category.name %></b>
 </p>
 
 <p>
-  <strong>Location:</strong>
-  <%= @job.location.name %>
+  <em>Location:</em>
+  <b><%= @job.location.name %></b>
 </p>
 
 <p>
-  <strong>Mode:</strong>
-  <%= @job.mode.name %>
+  <em>Job Mode:</em>
+  <b><%= @job.mode.name %></b>
 </p>
 
 <p>
-  <strong>Jtype:</strong>
-  <%= @job.jtype.name %>
+  <em>Job Type:</em>
+  <b><%= @job.jtype.name %></b>
 </p>
 
 <p>
-  <strong>Nperiod:</strong>
-  <%= @job.nperiod %>
+  <em>Notice Period:</em>
+  <b><%= @job.nperiod %></b>
 </p>
 
 <p>
-  <strong>Gender:</strong>
-  <%= @job.gender.name %>
+  <em>Gender:</em>
+  <b><%= @job.gender.name %></b>
 </p>
 
 <p>
-  <strong>Contactperson:</strong>
-  <%= @job.contactperson %>
+  <em>Contact Person:</em>
+  <b><%= @job.contactperson %></b>
 </p>
 
 <p>
-  <strong>Contactemail:</strong>
-  <%= @job.contactemail %>
+  <em>Contact Email:</em>
+  <b><%= @job.contactemail %></b>
 </p>
 
 <p>
-  <strong>Contactno:</strong>
-  <%= @job.contactno %>
+  <em>Contact No:</em>
+  <b><%= @job.contactno %></b>
 </p>
-
+<div class="hr-spacer100"></div></br>
 <p>
-  <strong>Description:</strong>
+  <em>Description:</em>
    <%= sanitize(@job.description, :tags => ['strong', 'em', 'a', 'p','u']) %>
-</p>
-
+</p></br>
+<div class="hr-spacer100"></div>
+<!--
 <p>
-  <strong>Job Id:</strong>
+  <em>Job Id:</em>
    <%= @job.id %>
 </p>
+-->
 
 </div>
 
 <div class="col-right ">
-					<strong>Ads</strong>
+					<em>Ads</em>
 </div>
 </div>
 </br>
 
 
-<%= link_to 'Ask4Refferal', new_referral_path(:jobid => @job.id)  %>
+	<div class="logo">
+					<%= link_to new_referral_path(:jobid => @job.id) do %>
+						<%= image_tag("logo_11.JPG", :alt => "Ask4Referral") %>
+					<% end %>
+	</div>
+<!--	
+<em>
+<%= link_to "Ask4Refferal", new_referral_path(:jobid => @job.id) %>
+</em> -->
 </br>
