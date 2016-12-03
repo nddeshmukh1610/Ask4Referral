@@ -950,14 +950,3 @@ button, input[type="submit"], input[type="reset"] {
     margin-bottom: 9.15px;
 }
 
-.button 1{
-  
-  color: #555;
-  display: block;
-  float: left;
-  font: normal 12px arial, sans-serif;
-  height: 48px;
-  margin-right: 6px;
-  padding-right: 18px; /* sliding doors padding */
-  text-decoration: none;
-}
