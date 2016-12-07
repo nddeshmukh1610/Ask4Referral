@@ -30,5 +30,5 @@ production:
   <<: *default
   
   database: Ask4Referral
-  username: postgres
-  password: superuser
+#  username: postgres
+#  password: superuser
