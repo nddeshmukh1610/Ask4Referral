@@ -1,3 +1,6 @@
+root = "/opt/www/Ask4Referral/current"
+working_directory root
+
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/uniocrn.log"
 
