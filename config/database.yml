@@ -29,6 +29,6 @@ test:
 production:
   <<: *default
   
-  database: Ask4Referral
+  database: Ask4Referral_production
 #  username: postgres
 #  password: superuser

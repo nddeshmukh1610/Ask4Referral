@@ -2,16 +2,18 @@
 lock '3.6.1'
 
 set :application, 'Ask4Referral'
-set :repo_url, 'https://github.com/nddeshmukh1610/Ask4Referral'
+set :repo_url, 'https://github.com/nddeshmukh1610/Ask4Referral.git'
+set :git_https_username, 'nddeshmukh1610'
+set :git_https_password, 'jaimatadi1610'
 
-set :user, 'deploy'
+set :user, 'ubuntu'
 
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+ set :deploy_to, '/var/www/Ask4Referral'
 
 # Default value for :scm is :git
 # set :scm, :git
