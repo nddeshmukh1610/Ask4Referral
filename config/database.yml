@@ -13,6 +13,7 @@ development:
   <<: *default
   
   database: Ask4Referral
+  host: localhost
   username: postgres
   password: superuser
 
