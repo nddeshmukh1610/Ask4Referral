@@ -31,8 +31,7 @@ Rails.application.routes.draw do
   
   #get 'referrals/index'
   
-  Precompile.ignore { ActiveAdmin.routes(self) } 
-#  ActiveAdmin.routes(self)
+  ActiveAdmin.routes(self)
   get '*path', to: 'jobs#index'
 
 end
