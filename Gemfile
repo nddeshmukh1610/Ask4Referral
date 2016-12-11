@@ -54,7 +54,7 @@ gem 'execjs'
 
 gem 'thin'
 
-gem 'activeadmin',github:'activeadmin'
+#gem 'activeadmin',github:'activeadmin'
 gem 'devise'
 
 gem 'paperclip'
