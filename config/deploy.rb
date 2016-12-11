@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.7.0'
 
 set :application, 'Ask4Referral'
 set :repo_url, 'https://github.com/nddeshmukh1610/Ask4Referral.git'
@@ -32,7 +32,7 @@ set :user, 'ubuntu'
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
 
 # Default value for linked_dirs is []
- append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
