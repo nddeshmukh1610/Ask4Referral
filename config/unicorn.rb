@@ -1,4 +1,5 @@
-root = "/opt/www/Ask4Referral/current"
+rails_env = ENV['RAILS_ENV'] || 'production'
+root = "/var/www/Ask4Referral/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
