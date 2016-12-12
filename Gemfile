@@ -31,6 +31,8 @@ gem 'unicorn'
 # Use Capistrano for deployment
 gem 'capistrano3-unicorn'
 
+gem 'capistrano-nginx'
+
 gem 'capistrano-rails', group: :development
 
 group :development, :test do

@@ -83,6 +83,8 @@ GEM
       capistrano (~> 3.1)
       sshkit (~> 1.2)
     capistrano-harrow (0.5.3)
+    capistrano-nginx (1.0.0)
+      capistrano (~> 3.1)
     capistrano-rails (1.2.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -274,6 +276,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap-sass
   byebug
+  capistrano-nginx
   capistrano-rails
   capistrano3-unicorn
   carrierwave
