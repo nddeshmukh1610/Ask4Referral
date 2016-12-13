@@ -15,7 +15,7 @@ class JobsController < InheritedResources::Base
 	def create
 		@job = Job.new(params[:job])
 		@job.japproval_id ||= "1"	# To set the default value of japproval_id as pending
-		@job.gender_id="3" if @job.gender_id.blank?
+		@job.gender_id="4" if @job.gender_id.blank?
 		if @job.save
 			redirect_to jobs_path, :notice => "Your Job has been posted successfully,Please wait for Admin Approval"
 		else
