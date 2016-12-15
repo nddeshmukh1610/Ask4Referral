@@ -87,6 +87,16 @@
 							<div class="hr-spacer"></div>														 
 							<div class="col-half-left">
 									<div style="display: inline-block;">
+											<strong>Experience *</strong>
+											
+											<%= f.select(:minexp, [["Min Exp (Years)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {},  :style => "width:220px" ) %> </br>
+											
+											<%= f.select(:maxexp, [["Max Exp (Years)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {}, :style => "width:220px" ) %> </br>
+											
+									</div>
+							</div>		
+							<div class="col-half-right">
+									<div style="display: inline-block;">
 											<strong>Salary</strong>
 											
 											<%= f.select(:minsalary, [["Min Salary (LPA)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {},  :style => "width:220px" ) %> </br>
@@ -96,16 +106,6 @@
 									</div>
 							</div>		
 							
-							<div class="col-half-right">
-									<div style="display: inline-block;">
-											<strong>Experience *</strong>
-											
-											<%= f.select(:minexp, [["Min Exp (Years)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {},  :style => "width:220px" ) %> </br>
-											
-											<%= f.select(:maxexp, [["Max Exp (Years)", ""],"0","1", "2", "3", "4", "5","6", "7", "8", "9", "10","11", "12", "13", "14", "15","16", "17", "18", "19", "20","21", "22", "23", "24", "25","26", "27", "28", "29", "30"], {}, :style => "width:220px" ) %> </br>
-											
-									</div>
-							</div>		
 							<div class="hr-spacer"></div>
 							
 							<div class="col-half-left">

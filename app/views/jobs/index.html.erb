@@ -1,5 +1,3 @@
-</br>
-<div class="hr-spacer100"></div>
    <div class="col-fullwidth">
        <div class="whitebox padd-15 clearfix">                    
            <h4 class="acchead">Jobs</h4>
@@ -9,10 +7,11 @@
                        <tr>
                            <th width="42%">JOB DESCRIPTION</th>
                            <th width="18%">COMPANY NAME</th>
-		<th width="13%">LOCATION</th>
+                		<th width="13%">LOCATION</th>
                            <th width="13%">EXPERIENCE</th>                                                
                            <th width="18%">POSTED</th>
-                       </tr>
+                           <th width="18%">Ask4Refferal</th>
+                    </tr>
                    </thead>
                    <tbody>
 	<% @jobs.each do |job| %>
@@ -23,8 +22,9 @@
 				<td><%= link_to job.title, job %></td>
 				<td><%= job.company %></td>			  
 				<td><%= job.location.name %></td>
-				<td><%= "#{@localminexp} - #{@localmaxexp} Years" %></td>														
-				<td><%= job.created_at.strftime("%d- %b- %Y") %></td>
+				<td><%= "#{@localminexp} - #{@localmaxexp} Y" %></td>														
+				<td><%= job.created_at.strftime("%d-%b-%Y") %></td>
+				<td><%= link_to "Ask4Refferal", new_referral_path(:jobid => job.id) %></td>
 			</tr>
 		<% end %>
 	<% end %>

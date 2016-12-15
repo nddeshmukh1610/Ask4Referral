@@ -4,6 +4,11 @@
 
 <div class="col-fullwidth">
 <div class="col-left">
+ <div class="logo">
+                                        <%= link_to new_referral_path(:jobid => @job.id) do %>
+                                                <%= image_tag("logo_11.JPG", :alt => "Ask4Referral") %>
+                                        <% end %>
+        </div>
 <p>
 <h2>Job Description:</h2>
 <p>
@@ -69,7 +74,7 @@
 
 <p>
   <em>Notice Period:</em>
-  <b><%= @job.nperiod %></b>
+  <b><%= @job.nperiod %></b><i> Days</i>
 </p>
 
 <p>
@@ -110,7 +115,7 @@
 <!--					<em>Ads</em>-->
 </div>
 </div>
-</br>
+
 
 
 	<div class="logo">
